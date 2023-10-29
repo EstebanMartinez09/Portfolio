@@ -3,6 +3,7 @@
 :root {
     --Verydarkbluemain: hsl(216, 54%, 11%);
     --Verydarkbluemain_v2: hsla(216, 54%, 11%, 0.945);
+    --Verydarkbluemain_v3: hsla(216, 54%, 11%, 0.777);
     --Cyan: hsl(178, 100%, 50%);
     --White: hsl(0, 0%, 100%);
     --Softblue: hsl(215, 51%, 70%);
@@ -26,10 +27,11 @@ body {
     color: var(--Softblue);
     font-family: 'Open Sans', sans-serif;
 }
-
+/* estilando la barra  */
 .contenedor {
     max-width: 1100px;
     margin: 0 auto;
+    border-bottom: 2px solid #c165d0;
 }
 
 .contenedor__color {
@@ -38,7 +40,7 @@ body {
 }
 
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -46,8 +48,11 @@ body {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    background-color: var(--Verydarkbluemain);
+    border-bottom-left-radius : 1rem;
+    border-bottom-right-radius: 1rem;
 }
-
+/* estilando el logo */
 .logo {
     padding: 0 1rem;
     font-family: 'Nosifer', sans-serif;
@@ -57,9 +62,10 @@ body {
 }
 
 .logo:hover {
-    color: #cd6a2e;
+    color: #c165d0;
     transform: scale(1.2);
 }
+/* estilando la navegacion */
 
 .contenedor .contenedor__navegacion ul li {
     position: relative;
@@ -75,34 +81,40 @@ body {
 }
 
 .contenedor .contenedor__navegacion ul li a:hover {
-    color: #cd6a2e;
+    color: #c165d0;
     transform: scale(1.1);
 }
-
+/* se oculta el chekbox */
 #menu {
     display: none;
 }
-
+/* se le da tamaño a icono */
 .icono__menu {
     width: 25px;
 }
-
+/* se le da un cursor pointer a icono de menu*/
 .contenedor label {
     cursor: pointer;
     display: none;
 }
 
+/* Se estiliza la sección acerca de mí */
+
 .presentacion__color {
-    background: var(--Verydarkbluemain_v2);
+    background: var(--Verydarkbluemain);
     min-height: 100vh;
     display: grid;
     place-items: center;
 }
 
+/* Se le dan propiedades a las imágenes  */
+
 img {
     width: 100%;
     display: block;
 }
+
+/* Se estiliza el div contenedor con flex y una separación, así como una medida en vh. */
 
 .contenedor__presentacion {
     max-width: 900px;
@@ -113,10 +125,15 @@ img {
     gap: 1rem;
 }
 
+/* Se estiliza la imagen. */
+
 .presentacion__img {
     overflow: hidden;
     width: 300px;
+    border-radius: 1rem;
 }
+
+
 
 .presentacion__texto {
     display: flex;
@@ -129,8 +146,14 @@ img {
 }
 
 .h1__titulo span {
+    cursor: pointer;
     color: var(--Cyan);
     font-size: 20px;
+    transition:  .5s;
+}
+
+.h1__titulo span:hover{
+    color: #c165d0;
 }
 
 .boton__cv {
@@ -146,11 +169,61 @@ img {
 
 .boton__cv:hover {
     transform: scale(1.1);
-    background: var(--Cyan);
-    color: black;
-    border: 3px solid black;
+    background: #c165d0;
+    color: var(--White);
 }
 
+.sobre__mi{
+    background-image: url('https://th.bing.com/th/id/R.15ad9c02a6e35f76ccf58ccb37450b2e?rik=7z7dpZ2gH5Nlkg&pid=ImgRaw&r=0');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.contenedor__mi{
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: var(--Verydarkbluemain_v3);
+    padding: 2rem;
+    border-radius: 1rem;
+
+    color: var(--White);
+
+}
+
+.texto__mi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 500px;
+}
+
+
+.texto__mi h2 {
+    cursor: pointer;
+    color: var(--Cyan);
+    border-bottom: 3px solid var(--Cyan);
+    transition: .5s;
+}
+
+.texto__mi h2:hover{
+    color: #c165d0;
+    border-bottom:3px solid #c165d0 ;
+}
+
+.sobremi__img {
+    overflow: hidden;
+    width: 300px;
+    border-radius: 1rem;
+}
 
 
 
@@ -159,7 +232,11 @@ img {
 @media (max-width:991px) {
 
     .contenedor {
-        padding: 30px;
+        padding: 15px;
+    }
+
+    .header{
+        border-radius: 1px;
     }
 
     .contenedor label {
@@ -167,7 +244,7 @@ img {
     }
 
     .contenedor__color {
-        padding: 51px 0;
+        padding: 55px 0;
     }
 
     .contenedor .contenedor__navegacion {
@@ -195,7 +272,20 @@ img {
     }
 
     .presentacion__texto {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .sobre__mi{
+        padding: 3rem;
+    }
+
+    .contenedor__mi{
+        min-height: 100vh;
         display: grid;
+        padding: 40px 15px;
+        gap: 2rem;
         place-items: center;
     }
 }

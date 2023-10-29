@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title>Esteban Martinez</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,19 +13,20 @@
 </head>
 
 <body>
-
+    <!-- header de portafolio  -->
     <header>
         <div class="contenedor__color">
             <div class="contenedor header">
-                <a href="#" class="logo">Esteban</a>
+                <a href="#inicio" class="logo">Esteban</a>
                 <input type="checkbox" id="menu">
                 <label for="menu">
                     <img src="./assets/imgs/menu.png" class="icono__menu" alt="icono menu">
                 </label>
                 <nav class="contenedor__navegacion">
                     <ul>
-                        <li><a class="link__nav" href="#">Inicio</a></li>
-                        <li><a class="link__nav" href="#">Sobre mí</a></li>
+                        <li><a class="link__nav" href="#inicio">Inicio</a></li>
+                        <li><a class="link__nav" href="#sobre_mi">Acerca de mí</a></li>
+                        <li><a class="link__nav" href="#">Habilidades</a></li>
                         <li><a class="link__nav" href="#">Proyectos</a></li>
                         <li><a class="link__nav" href="#">Contacto</a></li>
                     </ul>
@@ -35,21 +37,35 @@
     </header>
 
     <main>
-        <div class="presentacion__color">
+        <section class="presentacion__color" id="inicio">
             <div class="contenedor__presentacion">
                 <div class="presentacion__img">
-                    <img src="./assets/imgs/img_esteban.png" alt="imagen de esteban" >
+                    <img src="./assets/imgs/img_esteban.png" alt="imagen de esteban">
                 </div>
                 <div class="presentacion__texto">
                     <div class="titulo">
                         <h1 class="h1__titulo"><span>!Hola, soy</span><br>Camilo Esteban Martinez Marin</h1>
                     </div>
-                    <p><span>Apasionado</span> <span>por</span> <span>la</span> <span>innovación</span> <span>el</span> <span>desarrollo</span> <span>y</span> <span>la</span> <span>tecnología</span><span>.</span></p>
+                    <p>Apasionado por la innovación el desarrollo y la tecnología.</p>
                     <button class="boton__cv">Descargar CV</button>
                 </div>
             </div>
-        </div>
-        
+        </section>
+
+        <section class="sobre__mi" id="sobre_mi">
+            <div class="contenedor__mi">
+                <div class="texto__mi">
+                    <h2>Acerca de mí</h2>
+                    <p>Me caracterizo por ser un joven con excelentes relaciones interpersonales, motivado por la perfección y el detalle; Me apasiona la tecnología, la innovación y mi sueño es el espacio, entre mis pasatiempos, sin duda la música es mi favorita. Tengo 24 años y vivo en Colombia, actualmente me encuentro estudiando ciencias de la computación y desarrollo web.</p>
+                </div>
+                <div class="sobremi__img">
+                    <img src="./assets/imgs/img_esteban_2.png" alt="imagen">
+                </div>
+
+            </div>
+        </section>
+
+
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <br><br><br><br><br>
         <br><br><br>
