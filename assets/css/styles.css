@@ -179,10 +179,12 @@ img {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 
     min-height: 100vh;
     display: grid;
     place-items: center;
+    
 }
 
 .contenedor__mi{
@@ -261,6 +263,8 @@ img {
     
 }
 
+/* se estiliza la carta  */
+
 .card {
     background-color:var(--White) ;
     display: flex;
@@ -277,13 +281,11 @@ img {
 }
 
 .card:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     background-color: var(--Verydarkbluemain);
     color: var(--White);
     border: 3px solid var(--White);
 }
-
-
 
 .card img{
     height: 100px;
